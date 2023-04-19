@@ -54,6 +54,10 @@ public class TreeMain {
 
         System.out.println("максимальный элемент дерева " + z);
 
+        int listCount = tree.getChildrenCount(Tree.Node);
+
+        System.out.println(listCount);
+
     }
 
 

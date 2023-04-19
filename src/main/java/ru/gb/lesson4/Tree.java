@@ -5,6 +5,8 @@ import java.util.function.Consumer;
 
 public class Tree {
 
+
+
     class Node {
         private int value;
         private Node left;
@@ -167,5 +169,17 @@ public class Tree {
             findLast(current.right, resultMax);
         }
     }
+    // 2. Реализовать подсчет листьев. Листья - это такие узлы дерева, у которых нет дочерних элементов. Метод назвать getChildrenCount
+
+    public int getChildrenCount(Node current, int value) {
+        int i = 0;
+
+        if (current.left == null && current.right != null){ //
+            i++;
+
+        }
+        return i;
+    }
+
 
 }
