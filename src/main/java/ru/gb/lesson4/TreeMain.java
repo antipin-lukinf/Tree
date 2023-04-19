@@ -48,7 +48,17 @@ public class TreeMain {
         // bfs breath-first-search // поиск в ширину
         System.out.println(tree); // []
 
+        List x = tree.findLast();
+        int y = x.size();
+        int z = (int) x.get(y-1);
+
+        System.out.println("максимальный элемент дерева " + z);
+
     }
+
+
+
+
 
 
     // HASH TABLE

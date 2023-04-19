@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 public class Tree {
 
-    private class Node {
+    class Node {
         private int value;
         private Node left;
         private Node right;
@@ -152,6 +152,20 @@ public class Tree {
         // или dfs
         bfs(n -> counter[0]++);
         return counter[0];
+    }
+
+    public List<Integer> findLast(){
+        List<Integer> resultMax = new ArrayList<>();
+        findLast(root, resultMax);
+        return resultMax;
+    }
+    // 1. Реализовать поиск максимального элемента в дереве. Метод назвать findLast
+    private void findLast(Node current, List<Integer> resultMax){
+        if (current != null){
+            findLast(current.left, resultMax);
+            resultMax.add(current.value);
+            findLast(current.right, resultMax);
+        }
     }
 
 }
